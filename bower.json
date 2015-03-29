@@ -1,0 +1,21 @@
+{
+  "name": "navbar-variant",
+  "version": "0.0.0",
+  "homepage": "https://github.com/db0company/navbar-variant",
+  "authors": [
+    "db0company <db0company@gmail.com>"
+  ],
+  "description": "LESS CSS mixin to change the navbar color in Bootstrap.",
+  "main": "navbar-variant.less",
+  "keywords": [
+    "bootstrap"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
