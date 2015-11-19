@@ -1,20 +1,23 @@
 // This file is derived from https://github.com/twbs/bootstrap/blob/master/less/navbar.less
 
-.navbar-variant(@navbar-inverse-bg, @navbar-inverse-color) {
-    @navbar-inverse-border: darken(@navbar-inverse-bg, 10%);
-    @navbar-inverse-link-color: lighten(@navbar-inverse-color, 20%);
-    @navbar-inverse-link-hover-color: #fff;
-    @navbar-inverse-link-hover-bg: transparent;
-    @navbar-inverse-link-active-color: @navbar-inverse-link-hover-color;
-    @navbar-inverse-link-active-bg: darken(@navbar-inverse-bg, 10%);
-    @navbar-inverse-link-disabled-color: @navbar-inverse-bg;
-    @navbar-inverse-link-disabled-bg: transparent;
-    @navbar-inverse-brand-color: @navbar-inverse-link-color;
-    @navbar-inverse-brand-hover-color: #fff;
-    @navbar-inverse-brand-hover-bg: transparent;
-    @navbar-inverse-toggle-hover-bg: @navbar-inverse-bg;
-    @navbar-inverse-toggle-icon-bar-bg: #fff;
-    @navbar-inverse-toggle-border-color: @navbar-inverse-bg;
+.navbar-variant(
+    @navbar-inverse-bg,
+    @navbar-inverse-color,
+    @navbar-inverse-border,
+    @navbar-inverse-link-color,
+    @navbar-inverse-link-hover-color,
+    @navbar-inverse-link-hover-bg,
+    @navbar-inverse-link-active-color,
+    @navbar-inverse-link-active-bg,
+    @navbar-inverse-link-disabled-color,
+    @navbar-inverse-link-disabled-bg,
+    @navbar-inverse-brand-color,
+    @navbar-inverse-brand-hover-color,
+    @navbar-inverse-brand-hover-bg,
+    @navbar-inverse-toggle-hover-bg,
+    @navbar-inverse-toggle-icon-bar-bg,
+    @navbar-inverse-toggle-border-color,
+) {
 
     background-color: @navbar-inverse-bg;
     border-color: @navbar-inverse-border;
@@ -156,4 +159,48 @@
 	    color: white!important;
 	}
     }
+}
+
+.navbar-variant(@navbar-inverse-bg, @navbar-inverse-color, @navbar-hover) {
+    @navbar-inverse-border: @navbar-hover;
+    @navbar-inverse-link-color: lighten(@navbar-inverse-color, 20%);
+    @navbar-inverse-link-hover-color: #fff;
+    @navbar-inverse-link-hover-bg: transparent;
+    @navbar-inverse-link-active-color: @navbar-inverse-link-hover-color;
+    @navbar-inverse-link-active-bg: @navbar-hover;
+    @navbar-inverse-link-disabled-color: @navbar-inverse-bg;
+    @navbar-inverse-link-disabled-bg: transparent;
+    @navbar-inverse-brand-color: @navbar-inverse-link-color;
+    @navbar-inverse-brand-hover-color: #fff;
+    @navbar-inverse-brand-hover-bg: transparent;
+    @navbar-inverse-toggle-hover-bg: @navbar-inverse-bg;
+    @navbar-inverse-toggle-icon-bar-bg: #fff;
+    @navbar-inverse-toggle-border-color: @navbar-inverse-bg;
+    .navbar-variant(
+	@navbar-inverse-bg,
+	@navbar-inverse-color,
+	@navbar-inverse-border,
+	@navbar-inverse-link-color,
+	@navbar-inverse-link-hover-color,
+	@navbar-inverse-link-hover-bg,
+	@navbar-inverse-link-active-color,
+	@navbar-inverse-link-active-bg,
+	@navbar-inverse-link-disabled-color,
+	@navbar-inverse-link-disabled-bg,
+	@navbar-inverse-brand-color,
+	@navbar-inverse-brand-hover-color,
+	@navbar-inverse-brand-hover-bg,
+	@navbar-inverse-toggle-hover-bg,
+	@navbar-inverse-toggle-icon-bar-bg,
+	@navbar-inverse-toggle-border-color,
+    )
+}
+
+.navbar-variant(@navbar-inverse-bg, @navbar-inverse-color) {
+    @navbar-hover: darken(@navbar-inverse-bg, 10%);
+    .navbar-variant(
+	@navbar-inverse-bg,
+	@navbar-inverse-color,
+	@navbar-hover,
+    )
 }
