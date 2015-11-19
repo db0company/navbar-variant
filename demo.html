@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A LESS mixin to change the color of your Bootstrap navbar.">
+    <meta name="author" content="db0 <db0company@gmail.com>">
+
+    <title>Navbar-variant: A LESS mixin to change the color of your Bootstrap navbar.</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet/less" type="text/css" href="demo.less" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <br><br><br>
+      <div class="jumbotron">
+	<h1>Navbar-variant</h1>
+	<p>
+	  A LESS mixin to change the color of your <a href="http://getbootstrap.com/components/#navbar" target="_blank">Bootstrap navbar</a>.
+	</p>
+	<br>
+	<br>
+	<p class="text-right">
+	  <a class="btn btn-lg btn-primary" href="navbar-variant.less" role="button"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Download navbar-variant.less</a>
+	</p>
+	<p>Install with <a href="http://bower.io/" target="_blank">bower</a>:</p>
+	<pre>$> bower install navbar-variant</pre>
+      </div>
+
+      <h2>Demo</h2>
+
+      <nav class="navbar navbar-blue">
+	<div class="container-fluid">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	      <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="#">Project name</a>
+	  </div>
+	  <div id="navbar" class="navbar-collapse collapse">
+	    <ul class="nav navbar-nav">
+	      <li class="active"><a href="#">Home</a></li>
+	      <li><a href="#">About</a></li>
+	      <li><a href="#">Contact</a></li>
+	      <li class="dropdown">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+		<ul class="dropdown-menu">
+		  <li><a href="#">Action</a></li>
+		  <li><a href="#">Another action</a></li>
+		  <li><a href="#">Something else here</a></li>
+		  <li role="separator" class="divider"></li>
+		  <li class="dropdown-header">Nav header</li>
+		  <li><a href="#">Separated link</a></li>
+		  <li><a href="#">One more separated link</a></li>
+		</ul>
+	      </li>
+	    </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	      <li class="active"><a href="#">Another button <span class="sr-only">(current)</span></a></li>
+	      <li><a href="#">One more</a></li>
+	      <li><a href="#">The final one</a></li>
+	    </ul>
+	  </div>
+	</div>
+      </nav>
+
+      <br><hr>
+
+      <h3>Position</h3>
+      <div class="btn-group" data-toggle="buttons" id="position">
+	<label class="btn btn-default active">
+	  <input type="radio" name="position" id="normal">Normal
+	</label>
+	<label class="btn btn-default">
+	  <input type="radio" name="position" id="static-top">Static top
+	</label>
+	<label class="btn btn-default">
+	  <input type="radio" name="position" id="fixed-top">Fixed top
+	</label>
+	<label class="btn btn-default">
+	  <input type="radio" name="position" id="fixed-bottom">Fixed bottom
+	</label>
+      </div>
+
+      <h3>Color</h3>
+      <div class="btn-group" data-toggle="buttons" id="color">
+	<label class="btn btn-red">
+	  <input type="radio" name="color" id="red">Red
+	</label>
+	<label class="btn btn-orange">
+	  <input type="radio" name="color" id="orange">Orange
+	</label>
+	<label class="btn btn-yellow">
+	  <input type="radio" name="color" id="yellow">Yellow
+	</label>
+	<label class="btn btn-green">
+	  <input type="radio" name="color" id="green">Green
+	</label>
+	<label class="btn btn-blue active">
+	  <input type="radio" name="color" id="blue">Blue
+	</label>
+	<label class="btn btn-purple">
+	  <input type="radio" name="color" id="purple">Purple
+	</label>
+      </div>
+
+      <br><br><hr>
+
+      <h3>Get the code</h3>
+
+      <h4>LESS file</h4>
+      <pre>@import "navbar-variant.less";
+
+.navbar-<span class="code-less-color">blue</span> {
+  .navbar-variant(<span class="code-less-color">blue</span>, <span class="code-less-alt-color">white</span>);
+}</span></pre>
+
+      <h4>HTML file</h4>
+      <pre>&lt;nav class=&quot;<span id="code-classes">navbar-blue</span>&quot;&gt;
+  ...
+&lt;/nav&gt;</pre>
+
+      <br><br><hr><br><br>
+      <div class="text-center">
+	<iframe src="http://ghbtns.com/github-btn.html?user=db0company&repo=navbar-variant&type=watch&size=large&count=true"
+		allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
+	<iframe src="http://ghbtns.com/github-btn.html?user=db0company&repo=navbar-variant&type=fork&size=large&count=true"
+		allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
+	<iframe src="http://ghbtns.com/github-btn.html?user=db0company&repo=navbar-variant&type=follow&size=large"
+		allowtransparency="true" frameborder="0" scrolling="0" width="220" height="30"></iframe>
+	<br><br>
+	<a class="btn btn-link" href="http://db0.company/" target="_blank">Made with <span class="glyphicon glyphicon-heart" style="color: red"></span> by db0</a>
+	<a class="btn btn-link" href="http://db0.company/#projects" target="_blank">Browse my other projects</a>
+      </div>
+      <br><br><br>
+    </div> <!-- /container -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script>
+      function setNavbar() {
+	  setTimeout(function() {
+	      var position = $('#position .active input').prop('id');
+	      var color = $('#color .active input').prop('id');
+	      $('nav').removeClass();
+	      $('nav').addClass('navbar navbar-' + color);
+	      if (position != 'normal') {
+		  $('nav').addClass('navbar-' + position);
+	      }
+	      $('#code-classes').text($('nav').prop('class'));
+	      $('.code-less-color').text(color);
+	      $('.code-less-alt-color').text(color == 'yellow' ? 'red' : 'white');
+	  }, 100);
+      }
+      setNavbar();
+      $("#color .btn").click(setNavbar);
+      $("#position .btn").click(setNavbar);
+    </script>
+  </body>
+</html>
